@@ -9,7 +9,7 @@ function setup() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   cnv.position(x, y);
-  scene = "main_menu"
+  scene = "clickToPlay"
   timer = 0;
   night = 1;
   power = 100
@@ -96,6 +96,14 @@ function draw() {
   scene_jumpscare();
   noPower();
   customNightMenu();
+}
+
+function clickToPlay(){
+  if (scene != "clickToPlay") {return}
+  background(0)
+  fill(255)
+  textSize(50)
+  text("click to play", 250,300) 
 }
 
 function scene_menu(){
@@ -353,7 +361,9 @@ function mouseClicked(){
   
   console.log("X:"+mouseX+" Y:"+mouseY);
   
-  
+  if (scene == "clickToPlay"){
+    scene = "main_menu" 
+  }
   
   if (scene == "gameEntrance"){
     timer += 150; 
