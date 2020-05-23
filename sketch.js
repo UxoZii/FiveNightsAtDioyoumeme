@@ -96,6 +96,7 @@ function draw() {
   scene_jumpscare();
   noPower();
   customNightMenu();
+  clickToPlay();
 }
 
 function clickToPlay(){
