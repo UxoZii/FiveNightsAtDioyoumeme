@@ -7,7 +7,8 @@ function preload(){
 function setup() {
   cnv = createCanvas(800, 600);
   var x = (windowWidth - width) / 2;
-  cnv.position(x, 0);
+  var y = (windowHeight - height) / 2;
+  cnv.position(x, y);
   scene = "main_menu"
   timer = 0;
   night = 1;
