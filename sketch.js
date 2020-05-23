@@ -5,7 +5,9 @@ function preload(){
 // 1 hour = 90 seconds;
 
 function setup() {
-  createCanvas(800, 600);
+  cnv = createCanvas(800, 600);
+  var x = (windowWidth - width) / 2;
+  cnv.position(x, 0);
   scene = "main_menu"
   timer = 0;
   night = 1;
